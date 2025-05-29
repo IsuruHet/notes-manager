@@ -13,9 +13,14 @@
     <div class="bg-white shadow-xl rounded-2xl p-10 max-w-lg text-center">
         <h1 class="text-4xl font-bold text-blue-600 mb-4">Welcome to Notes Manager</h1>
         <p class="text-gray-600 text-lg mb-6">Manage your notes efficiently with Laravel & Tailwind CSS.</p>
-        <a href="" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">
+        <div class="flex justify-center align-items-center gap-5">
+        <a href="{{route('login')}}" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">
             Get Started
         </a>
+        <a href="{{route('register')}}" class="text-blue-600 border border-gray-600 hover:text-white hover:bg-blue-600  font-semibold py-2 px-4 rounded-lg">
+            Register
+        </a>
+        </div>
     </div>
 </body>
 
