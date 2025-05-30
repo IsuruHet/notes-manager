@@ -2,30 +2,15 @@ import { Head, Link, router } from "@inertiajs/react";
 import { useEffect } from "react";
 
 export default function Welcome({ auth }) {
-    // Redirect to dashboard if authenticated
     useEffect(() => {
         if (auth?.user) {
             if (auth.user.role === "admin") {
-                router.visit(route("admin.dashboard")); // make sure this route name exists
+                router.visit(route("admin.dashboard"));
             } else if (auth.user.role === "user") {
                 router.visit(route("user.dashboard"));
-            } else {
-                // fallback
-                router.visit(route(""));
             }
         }
     }, [auth]);
-
-    const handleImageError = () => {
-        document
-            .getElementById("screenshot-container")
-            ?.classList.add("!hidden");
-        document.getElementById("docs-card")?.classList.add("!row-span-1");
-        document
-            .getElementById("docs-card-content")
-            ?.classList.add("!flex-row");
-        document.getElementById("background")?.classList.add("!hidden");
-    };
 
     return (
         <>

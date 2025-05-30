@@ -18,15 +18,13 @@ class NoteController extends Controller
 
         return inertia('User/Dashboard', [
             'notes' => $notes,
-            'auth' => ['user' => Auth::user()],
+
         ]);
     }
 
     public function create()
     {
-        return inertia('User/Notes/Create', [
-            'auth' => ['user' => Auth::user()],
-        ]);
+        return inertia('User/Notes/Create');
     }
 
     public function store(Request $request)
@@ -38,7 +36,7 @@ class NoteController extends Controller
 
         Auth::user()->notes()->create($request->only('title', 'content'));
 
-        return redirect()->route('user.notes.index')->with('success', 'Note created.');
+        return redirect()->route('user.dashboard')->with('success', 'Note created.');
     }
 
     public function edit(Note $note)
@@ -47,7 +45,7 @@ class NoteController extends Controller
 
         return inertia('User/Notes/Edit', [
             'note' => $note,
-            'auth' => ['user' => Auth::user()],
+
         ]);
     }
 
@@ -62,7 +60,7 @@ class NoteController extends Controller
 
         $note->update($request->only('title', 'content'));
 
-        return redirect()->route('user.notes.index')->with('success', 'Note updated.');
+        return redirect()->route('user.dashboard')->with('success', 'Note updated.');
     }
 
     public function destroy(Note $note)
@@ -71,6 +69,6 @@ class NoteController extends Controller
 
         $note->delete();
 
-        return redirect()->route('user.notes.index')->with('success', 'Note deleted.');
+        return redirect()->route('user.dashboard')->with('success', 'Note deleted.');
     }
 }

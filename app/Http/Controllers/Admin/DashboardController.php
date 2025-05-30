@@ -9,8 +9,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return inertia('Admin/Dashboard', [
-            'auth' => ['user' => Auth::user()],
-        ]);
+        return inertia('Admin/Dashboard');
     }
 }
