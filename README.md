@@ -1,5 +1,14 @@
 # 📝 Notes Manager Web App
 
+![Laravel](https://img.shields.io/badge/Laravel-10.x-red?logo=laravel)
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-06B6D4?logo=tailwindcss)
+![MySQL](https://img.shields.io/badge/Database-MySQL-blue?logo=mysql)
+![Vite](https://img.shields.io/badge/Vite-React-646CFF?logo=vite)
+![Breeze](https://img.shields.io/badge/Auth-Breeze-lightgrey)
+
+---
+
 A modern web application for managing personal notes, built with:
 
 -   ⚙️ **Laravel** (Backend API, Authentication via Breeze)
