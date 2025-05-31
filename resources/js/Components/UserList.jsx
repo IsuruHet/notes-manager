@@ -6,7 +6,7 @@ export default function UserList({ users }) {
 
     const handleRoleChange = (userId, newRole) => {
         router.patch(
-            route("admin.users.updateRole", userId),
+            route("admin.user.updateRole", userId),
             { role: newRole },
             {
                 onSuccess: () => {
@@ -59,7 +59,7 @@ export default function UserList({ users }) {
                                             e.target.value
                                         )
                                     }
-                                    className="border rounded px-6 py-1"
+                                    className="border rounded pr-8 py-1"
                                 >
                                     <option value="user">User</option>
                                     <option value="admin">Admin</option>
