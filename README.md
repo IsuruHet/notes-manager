@@ -1,25 +1,23 @@
----
-
 # 📝 Notes Manager Web App
 
 A modern web application for managing personal notes, built with:
 
-* ⚙️ **Laravel** (Backend API, Authentication via Breeze)
-* ⚛️ **React** (Frontend UI)
-* 💨 **Tailwind CSS** (Styling)
+-   ⚙️ **Laravel** (Backend API, Authentication via Breeze)
+-   ⚛️ **React** (Frontend UI)
+-   💨 **Tailwind CSS** (Styling)
 
 ## 🔐 Features by Role
 
 ### 👤 User
 
-* Create notes 🆕
-* Edit notes ✏️
-* Delete notes 🗑️
+-   Create notes 🆕
+-   Edit notes ✏️
+-   Delete notes 🗑️
 
 ### 🛠️ Admin
 
-* Delete users ❌
-* Change user roles 🔁
+-   Delete users ❌
+-   Change user roles 🔁
 
 ---
 
