@@ -36,8 +36,10 @@ Route::middleware(['auth', 'role:user'])->prefix('user')->name('user.')->group(f
 // Admin routes (for role = 'admin')
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
-    Route::get('users', [AdminUserController::class, 'index'])->name('users.index');
-    // Add more admin routes as needed
+    Route::patch('user/{user}/role',[AdminUserController::class,'updateRole'])->name('user.updateRole');
+    Route::delete('users/{user}',[AdminUserController::class,'destroy'])->name('users.destroy');
+
+
 });
 
 require __DIR__.'/auth.php';
